@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividad-2-3</title>
+  </head>
+  <body>
+    <script>
+      /*johan sneider berrio ramos, 
+        ficha: 3312694 
+        nivel: nivel-6 actividad-2-3
+      */
+      const estadisticas = (...numeros) => {
+        if (numeros.length === 0) return null;
+
+        const suma = numeros.reduce((acumulador, n) => acumulador + n, 0);
+        const promedio = parseFloat((suma / numeros.length).toFixed(2));
+        const minimo = Math.min(...numeros);
+        const maximo = Math.max(...numeros);
+
+        return { minimo, maximo, promedio, suma };
+      };
+
+      const mostrarResultados = (etiqueta, resultado) => {
+        console.log("");
+        console.log(`llamada: estadisticas(${etiqueta})`);
+        console.log("");
+        if (resultado === null) {
+          console.log("null > (no se recibieron argumentos)");
+        } else {
+          console.log(`minimo: ${resultado.minimo}`);
+          console.log(`maximo: ${resultado.maximo}`);
+          console.log(`promedio: ${resultado.promedio}`);
+          console.log(`suma: ${resultado.suma}`);
+        }
+      };
+
+      mostrarResultados("", estadisticas());
+      mostrarResultados("3, 7, 2, 9, 5", estadisticas(3, 7, 2, 9, 5));
+
+      mostrarResultados(
+        "-8, 4.5, 0, 12.3, -1.7, 6",
+        estadisticas(-8, 4.5, 0, 12.3, -1.7, 6),
+      );
+      console.log("");
+    </script>
+  </body>
+</html>

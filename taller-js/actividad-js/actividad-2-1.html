@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividad-2-1</title>
+  </head>
+  <body>
+    <script>
+      /*johan sneider berrio ramos, 
+        ficha: 3312694 
+        nivel: nivel-4 actividad-2-1
+      */
+      const validapassword = (password) => {
+        const longitudvalida = password.length >= 8;
+        const tienemayuscula = /[A-Z]/.test(password);
+        const tienenumero = /[0-9]/.test(password);
+        const tieneespecial = /[*/%$#&!]/.test(password);
+        const esvalida =
+          longitudvalida && tienemayuscula && tienenumero && tieneespecial;
+
+        return {
+          longitudvalida,
+          tienemayuscula,
+          tienenumero,
+          tieneespecial,
+          esvalida,
+        };
+      };
+
+      const password = prompt("ingresa tu contraseña");
+
+      const resultado = validapassword(password);
+
+      console.log("");
+      console.log(`contraseña: "${password}"`);
+      console.log("");
+      console.log("resultado de validacion");
+      console.log(resultado);
+      console.log("");
+      console.log(`¿contraseña valida? > ${resultado.esvalida ? "si" : "no"}`);
+      console.log("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividad-3-1</title>
+  </head>
+  <body>
+    <script>
+      /*johan sneider berrio ramos
+        ficha: 3312694 
+        nivel: nivel-7 actividad-3-1
+      */
+      const crearmultiplicador = (factor) => (numero) => numero * factor;
+
+      const duplicar = crearmultiplicador(2);
+      const triplicar = crearmultiplicador(3);
+      const cuadruplicar = crearmultiplicador(4);
+      const decuplicar = crearmultiplicador(10);
+
+      console.log("");
+      console.log("pruebas con duplicar (factor = 2)");
+      console.log("");
+      console.log(`duplicar(5) > ${duplicar(5)}`);
+      console.log(`dupplicar(8) > ${duplicar(8)}`);
+      console.log(`duplicar(3.5) > ${decuplicar(3.5)}`);
+
+      console.log("");
+      console.log("pruebas con triplicar (factor = 3)");
+      console.log("");
+      console.log(`triplicar(5) > ${triplicar(5)}`);
+      console.log(`triplicar(8) > ${triplicar(8)}`);
+      console.log(`triplicar(3.5) > ${triplicar(3.5)}`);
+
+      console.log("");
+      console.log("pruebas con cuadruplicar (factor = 4)");
+      console.log("");
+      console.log(`cuadruplicar(5) > ${cuadruplicar(5)}`);
+      console.log(`cuadruplicar(8) > ${cuadruplicar(8)}`);
+      console.log(`cuadruplicar(3.5) > ${cuadruplicar(3.5)}`);
+
+      console.log("");
+      console.log("pruebas con decuplicar (factor = 10)");
+      console.log("");
+      console.log(`decuplicar(5) > ${decuplicar(5)}`);
+      console.log(`decuplicar(8) > ${decuplicar(8)}`);
+      console.log(`decuplicar(3.5) > ${decuplicar(3.5)}`);
+      console.log("");
+    </script>
+  </body>
+</html>

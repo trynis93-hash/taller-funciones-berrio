@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividad-1-2</title>
+  </head>
+  <body>
+    <script>
+      /*johan sneider berrio ramos, 
+        ficha: 3312694 
+        nivel: nivel-2 actividad-1-2
+      */
+      const sumar = (a, b) => a + b;
+      const restar = (a, b) => a - b;
+      const multiplicar = (a, b) => a * b;
+      const dividir = (a, b) => (b === 0 ? "Error: división por cero" : a / b);
+
+      const num1 = Number(prompt("Ingresa el primer número:"));
+      const num2 = Number(prompt("Ingresa el segundo número:"));
+
+      console.log(`Números ingresados: ${num1} && ${num2}`);
+      console.log(`Suma:               ${sumar(num1, num2)}`);
+      console.log(`Resta:              ${restar(num1, num2)}`);
+      console.log(`Multiplicación:     ${multiplicar(num1, num2)}`);
+      console.log(`División:           ${dividir(num1, num2)}`);
+    </script>
+  </body>
+</html>

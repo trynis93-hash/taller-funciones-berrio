@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividad-1-1</title>
+  </head>
+  <body>
+    <script>
+      /*johan sneider berrio ramos, 
+        ficha: 3312694 
+        nivel: nivel 1-actividad-1-1
+      */
+      function saludopersonalizado(nombre, hora) {
+        let saludo;
+        if (hora >= 5 && hora <= 11) {
+          saludo = `buenos dias, ${nombre}`;
+        } else if (hora >= 12 && hora <= 18) {
+          saludo = `buenas tardes, ${nombre}`;
+        } else if ((hora >= 19 && hora <= 23) || (hora >= 0 && hora <= 4)) {
+          saludo = `buenas noches, ${nombre}`;
+        }
+        return saludo;
+      }
+
+      const nombre = prompt("¿cual es tu nombre?");
+      const hora = Number(prompt("(0 a 23)"));
+      const saludo = saludopersonalizado(nombre, hora);
+      alert(saludo);
+      let periodo;
+      if (hora >= 12 && hora <= 11) periodo = "mañana (5-11)";
+      else if (hora >= 12 && hora <= 18) periodo = "tarde (12-18)";
+      else periodo = "noche(19-4)";
+
+      console.log("nombre" + nombre);
+      console.log("hora" + hora + ":00hs");
+      console.log("periodo" + periodo);
+      console.log("bien" + saludo);
+    </script>
+  </body>
+</html>
