@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividad-2-1</title>
+    <script src="../js/actividad-2-1.js" defer></script>
+    <link rel="stylesheet" href="../css/actividad-2-1.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="header">
+        <h1>validacion de contraseña</h1>
+      </div>
+    </div>
+    <div class="field">
+      <label for="password">contraseña</label>
+      <div class="input-wrap">
+        <input
+          type="password"
+          name="nombre"
+          id="password"
+          placeholder="escribe tu contraseña..."
+          onclick="validarenvivo()"
+        />
+        <button
+          class="toggle-vis"
+          onclick="togglever()"
+          title="mostar / ocultar"
+        >
+          ojo
+        </button>
+      </div>
+    </div>
+    <div class="rules">
+      <div class="rule" id="r-longitud">
+        <span class="rule-icon">+8 caracteres</span>
+      </div>
+      <div class="rule" id="r-mayuscula">
+        <span class="rule-icon">mayuscula</span>
+      </div>
+      <div class="rule" id="r-numero">
+        <span class="rule-icon">numero</span>
+      </div>
+      <div class="rule" id="r-especial">
+        <span class="rule-icon">especial(/*-+?¡!°|)</span>
+      </div>
+    </div>
+    <button class="btn" onclick="validar()">validar contraseña</button>
+    <div class="result" id="result">
+      <div class="result-tittle" id="result-tittle"></div>
+      <div class="result-msg"></div>
+    </div>
+  </body>
+</html>

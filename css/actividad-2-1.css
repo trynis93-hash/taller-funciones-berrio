@@ -1,0 +1,180 @@
+body {
+  background: black;
+  color: #e8e8e8;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background: blanchedalmond;
+  border: 1px solid green;
+  border-radius: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 60px rgba(red, green, blue);
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: aqua;
+}
+
+.header p {
+  font-size: 0.8rem;
+  color: brown;
+  margin-top: 0.3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.field {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: cadetblue;
+  margin-bottom: 0.5rem;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  background: palegreen;
+  border: 1px solid palevioletred;
+  border-radius: 8px;
+  padding: 0.75rem 2.8rem 0.75rem 1rem;
+  color: cadetblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: blueviolet;
+}
+
+.toggle-vis {
+  position: absolute;
+  right: 075rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: bisque;
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.toggle-vis:hover {
+  color: burlywood;
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: salmon;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: color 0.25s;
+}
+
+.rule.ok {
+  color: green;
+}
+.rule.fail {
+  color: red;
+}
+
+.rule-icon {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: seashell;
+  color: aqua;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transform:
+    opacity 0.2s,
+    transform 0.1s;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.result {
+  margin-top: 1.2rem;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-size: 0.82rem;
+  display: none;
+  border: 2px solid transparent;
+}
+
+.result.valid {
+  display: block;
+  background: rgba(rgb(56, 4, 33), rgb(13, 199, 152), rgba(73, 73, 219, 0.281));
+  border-color: rbga(green, rgb(121, 29, 121), purple);
+  color: chartreuse;
+}
+
+.result-invalit {
+  display: block;
+  background: rgba(rgb(224, 49, 145), rgb(40, 83, 73), rgba(3, 3, 54, 0.281));
+  border-color: blueviolet;
+  color: beige;
+}
+
+.result .result-tittle {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
